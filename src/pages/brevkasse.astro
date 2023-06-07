@@ -52,15 +52,15 @@ const res = await fetch(supabaseUrl + "/rest/v1/brevkasse-girls", {
 </GirlsUniLayout>
 
 <script>
-  /*
+  
 
-  const filterButtons = document.querySelectorAll("a.color");
+  const filterButtonsBrevkasse = document.querySelectorAll("a.color");
   const cardsSection = document.querySelectorAll(".BrevkasseCard");
-  const dropdownOptions = document.querySelectorAll("select");
+  const dropdownOptionsBrevkasse = document.querySelectorAll("select");
 
-  const buttonsArray = [...filterButtons];
-  const filteredArray = [...cardsSection];
-  const optionsArray = [...dropdownOptions];
+  const buttonsArrayBrevkasse = [...filterButtonsBrevkasse];
+  const filteredArrayBrevkasse = [...cardsSection];
+  const optionsArrayBrevkasse = [...dropdownOptionsBrevkasse];
  
 
 
@@ -68,19 +68,19 @@ const res = await fetch(supabaseUrl + "/rest/v1/brevkasse-girls", {
 
  
 
-  optionsArray.forEach((button) => {
+  optionsArrayBrevkasse.forEach((button) => {
     button.addEventListener("change", () => {
-      if (filteredArray.length) {
-        filteredArray.forEach((filteredElement) => {
+      if (filteredArrayBrevkasse.length) {
+        filteredArrayBrevkasse.forEach((filteredElement) => {
           if (filteredElement.classList.contains("none")) {
             filteredElement.classList.remove("none");
           }
         });
       }
 
-      filteredArray.forEach((filteredElement) => {
+      filteredArrayBrevkasse.forEach((filteredElement) => {
         if (button.value === "alle") {
-          filteredArray.forEach((filteredElement) => {
+          filteredArrayBrevkasse.forEach((filteredElement) => {
             if (filteredElement.classList.contains("none")) {
               filteredElement.classList.remove("none");
             }
@@ -100,20 +100,20 @@ const res = await fetch(supabaseUrl + "/rest/v1/brevkasse-girls", {
 
 
 
-  buttonsArray.forEach((button) => {
+  buttonsArrayBrevkasse.forEach((button) => {
 
 
 
 
     button.addEventListener("click", () => {
-      if (buttonsArray.length) {
-        buttonsArray.forEach((button) => {
+      if (buttonsArrayBrevkasse.length) {
+        buttonsArrayBrevkasse.forEach((button) => {
           button.classList.remove("selected");
         });
       }
 
-      if (filteredArray.length) {
-        filteredArray.forEach((filteredElement) => {
+      if (filteredArrayBrevkasse.length) {
+        filteredArrayBrevkasse.forEach((filteredElement) => {
           if (filteredElement.classList.contains("none")) {
             filteredElement.classList.remove("none");
           }
@@ -124,9 +124,9 @@ const res = await fetch(supabaseUrl + "/rest/v1/brevkasse-girls", {
 
 
 
-      filteredArray.forEach((filteredElement) => {
+      filteredArrayBrevkasse.forEach((filteredElement) => {
         if (button.textContent.toLowerCase() === "alle") {
-          filteredArray.forEach((filteredElement) => {
+          filteredArrayBrevkasse.forEach((filteredElement) => {
             if (filteredElement.classList.contains("none")) {
               filteredElement.classList.remove("none");
             }
@@ -142,7 +142,7 @@ const res = await fetch(supabaseUrl + "/rest/v1/brevkasse-girls", {
 
 
 
-*/
+
 
 
   

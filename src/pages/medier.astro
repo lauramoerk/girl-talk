@@ -145,31 +145,31 @@ import Dropdown from "../components/ui/Dropdown.astro";
 </GirlsUniLayout>
 
 <script>
-  /*
-  const filterButtons = document.querySelectorAll("a.color");
+
+  const filterButtonsMedier = document.querySelectorAll("a.color");
   const mediaSections = document.querySelectorAll(".medier-article-section");
-  const dropdownOptions = document.querySelectorAll("select");
+  const dropdownOptionsMedier = document.querySelectorAll("select");
   const firstSection = document.querySelector(".medier-first-section");
 
-  const buttonsArray = [...filterButtons];
-  const filteredArray = [...mediaSections];
-  const optionsArray = [...dropdownOptions];
+  const buttonsArrayMedier = [...filterButtonsMedier];
+  const filteredArrayMedier = [...mediaSections];
+  const optionsArrayMedier = [...dropdownOptionsMedier];
 
-  optionsArray.forEach((button) => {
+  optionsArrayMedier.forEach((button) => {
     button.addEventListener("change", () => {
       firstSection.classList.add("none");
 
-      if (filteredArray.length) {
-        filteredArray.forEach((filteredElement) => {
+      if (filteredArrayMedier.length) {
+        filteredArrayMedier.forEach((filteredElement) => {
           if (filteredElement.classList.contains("none")) {
             filteredElement.classList.remove("none");
           }
         });
       }
 
-      filteredArray.forEach((filteredElement) => {
+      filteredArrayMedier.forEach((filteredElement) => {
         if (button.value === "alle") {
-          filteredArray.forEach((filteredElement) => {
+          filteredArrayMedier.forEach((filteredElement) => {
             if (filteredElement.classList.contains("none")) {
               filteredElement.classList.remove("none");
             }
@@ -183,17 +183,17 @@ import Dropdown from "../components/ui/Dropdown.astro";
     });
   });
 
-  buttonsArray.forEach((button) => {
+  buttonsArrayMedier.forEach((button) => {
     button.addEventListener("click", () => {
       firstSection.classList.add("none");
-      if (buttonsArray.length) {
-        buttonsArray.forEach((button) => {
+      if (buttonsArrayMedier.length) {
+        buttonsArrayMedier.forEach((button) => {
           button.classList.remove("selected");
         });
       }
 
-      if (filteredArray.length) {
-        filteredArray.forEach((filteredElement) => {
+      if (filteredArrayMedier.length) {
+        filteredArrayMedier.forEach((filteredElement) => {
           if (filteredElement.classList.contains("none")) {
             filteredElement.classList.remove("none");
           }
@@ -202,9 +202,9 @@ import Dropdown from "../components/ui/Dropdown.astro";
 
       button.classList.toggle("selected");
 
-      filteredArray.forEach((filteredElement) => {
+      filteredArrayMedier.forEach((filteredElement) => {
         if (button.textContent.toLowerCase() === "alle") {
-          filteredArray.forEach((filteredElement) => {
+          filteredArrayMedier.forEach((filteredElement) => {
             if (filteredElement.classList.contains("none")) {
               filteredElement.classList.remove("none");
             }
@@ -217,7 +217,7 @@ import Dropdown from "../components/ui/Dropdown.astro";
       });
     });
   });
-  */
+  
 </script>
 
 <style>
