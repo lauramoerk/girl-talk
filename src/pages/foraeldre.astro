@@ -4,7 +4,7 @@ import BoxColorButton from "../components/ui/BoxColorButton.astro";
 import Button from "../components/ui/Button.astro";
 import SearchBar from "../components/ui/SearchBar.astro";
 import BrevkasseCard from "../components/cards/BrevkasseCard.astro";
-const supabaseUrl = 'https://vrnvjrlmumgaywbxvaqv.supabase.co'
+/*const supabaseUrl = 'https://vrnvjrlmumgaywbxvaqv.supabase.co'
 const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZybnZqcmxtdW1nYXl3Ynh2YXF2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODUzODcwNDIsImV4cCI6MjAwMDk2MzA0Mn0.zWbD-YJqJP0ZuJDFHvhqG6JoxRoqVR79RP2mTmp71BQ'
 const res = await fetch(supabaseUrl + "/rest/v1/brevkasse-parents", {
         method: 'GET',
@@ -16,6 +16,7 @@ const res = await fetch(supabaseUrl + "/rest/v1/brevkasse-parents", {
         }
       });
     const data = await res.json();
+    */
 ---
 
 <BaseLayout title="Forældre">
@@ -101,12 +102,14 @@ const res = await fetch(supabaseUrl + "/rest/v1/brevkasse-parents", {
         <p class="light-text searchcopy">Søg efter breve</p>
         <SearchBar />
       </div>
+      <!-- 
       <div>
            <p class="indicator">{data.length} af {data.length}</p>
         <div class="lettercontainer">
           {data.map((letter) => 
           <BrevkasseCard category={letter.category} filter={letter.category.toLowerCase().replace(/\s/g, "_")} header={letter.title} href="/specificletter" />)}
               </div>
+              -->
         <div class="margintop button-container">
           <Button text="Læs flere" />
         </div>
