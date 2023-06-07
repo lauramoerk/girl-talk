@@ -34,7 +34,7 @@ const navLinks = [{
 </div>
 
 
-<ul class="nav-links nav-links-container" role="navigation">
+<ul class="desktop-nav nav-links nav-links-container" role="navigation">
  {navLinks.map(link => (
  <li> <a href={link.url}>{link.name}</a></li> ))}
  </ul>
@@ -79,6 +79,11 @@ const navLinks = [{
 
 <style>
 
+.desktop-nav li {
+  width: 115px;
+  text-align: center;
+  
+}
 a {
         color: var(--color-black-ish);
     }
@@ -98,10 +103,14 @@ justify-content: center;
 
 ul li:last-child {
   font-weight: var(--font-weight-semibold);
+  background-color: var(--color-off-white);
+  padding: 10px 15px 10px 15px;
+  border-radius: 8px;
 }
 .nav-links-container{
         display: flex;
         flex-direction: row;
+        align-items: center;
         justify-content: space-around;
         list-style: none;
         padding-bottom: 20px;
