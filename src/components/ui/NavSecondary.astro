@@ -23,8 +23,8 @@ const navLinks = [{
 
 <nav class="NavPrimary"> 
 
-<div class="nav-primary-logo">
-    <div class="logo"><a href="/main.html"><img class="pigelogo" src="/images/Pigeunivers_logo.png" alt="Pigeunivers by GirlTalk"></a></div>
+<div class="nav-primary-logo ">
+    <div class="logo fadeInUp-animation"><a href="/main.html"><img class="pigelogo" src="/images/Pigeunivers_logo.png" alt="Pigeunivers by GirlTalk"></a></div>
     <div class="search-container">
         <form action="/search" method="get">
           <input class="search expandright" id="searchright" type="search" name="q" placeholder="Search">
@@ -85,6 +85,7 @@ a {
 
 
   /*NAV PRIMARY*/
+
 
 .nav-primary-logo{
 position: relative;
@@ -344,7 +345,16 @@ FUNCTIONALITY. CONTROLLING STATE OF NAVIGATION
   transform: scale(1);
 }
 
-
+    @keyframes fadeInUp {
+  0% {
+    transform: translateY(0%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
 
 
 
@@ -353,6 +363,11 @@ FUNCTIONALITY. CONTROLLING STATE OF NAVIGATION
         display: none;
     }
 
+
+
+.fadeInUp-animation {
+  animation: 3s fadeInUp;
+}  
 
 }
 
