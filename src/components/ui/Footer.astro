@@ -9,7 +9,7 @@ import Button from "./Button.astro";
       <p class="themeheader">Tilmeld dig vores nyhedsbrev og få nyt om pigers trivsel og vores arbejde.</p>
       <p class="">Når du tilmelder dig GirTalks nyhedsbrev, accepterer du samtidig, at vi sender dig nyt om vores arbejde og markedsføringsmaterialer. Du kan til hver en tid afmelde dig igen.</p>
     </div>
-    <div>
+    <div class="sign-up-container">
       <form>
         <div class="footer_newsletter_form">
           <label class="themeheader" for="email">Din E-mail</label>
@@ -48,14 +48,18 @@ import Button from "./Button.astro";
     <section class="footer_contact">
       <div>
         <h4 class="subheader">GirlTalk</h4>
-        <p>Martinsvej 7, 1</p>
-        <p>1926 Frederiksberg C</p>
-        <p>CVR 30 14 53 48</p>
+        <div class="info-spacing">
+          <p>Martinsvej 7, 1</p>
+          <p>1926 Frederiksberg C</p>
+          <p>CVR 30 14 53 48</p>
+        </div>
       </div>
       <div class="pl20">
         <h4 class="subheader">Kontakt os</h4>
-        <p>51 91 33 77</p>
-        <p>info@girltalk.dk</p>
+        <div class="info-spacing maillink">
+          <p>51 91 33 77</p>
+          <a href="mailto:info@girltalk.dk">info@girltalk.dk</a>
+        </div>
       </div>
     </section>
   </section>
@@ -104,12 +108,9 @@ import Button from "./Button.astro";
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: var(--spacing-theme-header);
   }
 
-  .socialmedia a {
-    padding-left: 5px;
-    padding-right: 5px;
-  }
   .footer_newsletter {
     display: flex;
     flex-wrap: wrap;
@@ -168,6 +169,7 @@ gap: 10px;
   .footer_contact {
     display: flex;
     flex-direction: row;
+    padding-top: var(--spacing-xs);
   }
 
   .bottom_section {
@@ -196,8 +198,62 @@ gap: 10px;
 
     .footer-links-container {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     gap: 30px;
   }
   }
+
+  @media only screen and (min-width: 600px) {
+  .button-wrapper {
+    display: flex;
+    justify-content: start;
+  }
+  form {
+    gap: 0;
+  }
+
+  .sign-up-container {
+    display: flex;
+    padding: 0;
+    align-items: center;
+  }
+
+  .bottom_section {
+    padding-top: var(--spacing-xs);
+  }
+
+  .info-spacing {
+    display: flex;
+    flex-direction: column;
+    padding-top: var(--spacing-xs);
+  }
+
+  .maillink a {
+	color: var(--color-black-ish);
+  position: relative;
+  text-decoration: none;
+}
+  .maillink a::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1.5px;
+  border-radius: 4px;
+  background-color: var(--color-black-ish);
+  bottom: 0;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform .3s ease-in-out;
+}
+
+.maillink a:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+.footer_contact {
+    padding-top: 0;
+  }
+}
 </style>
