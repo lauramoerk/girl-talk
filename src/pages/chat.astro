@@ -11,7 +11,7 @@ import ColorSection from "../components/ui/ColorSection.astro"
 <ColorSection color="pink" title="GirlTalks Chat" hex="#ffe4ee" text="Start anonym chat">
 	<h1 class="primary-header" slot="title">GirlTalks Chat</h1>
   <div slot="circle">
-		<span class="dot"></span>
+		<span class="dot-circle dot-color pulse"></span>
 	</div>
 	<p slot="description">
 		Du kan chatte med os hver aften i åbningstiden.
@@ -51,15 +51,32 @@ import ColorSection from "../components/ui/ColorSection.astro"
 			align-items: center;
 		}
 
-.dot {
-  height: 25px;
-  width: 25px;
+    .dot-color {
   background-color: var(--color-green);
-  border-radius: 50%;
-  display: inline-block;
-  margin-right: 10px;
+    }
+
+    .dot-circle {
+      width: 25px;
+      height: 25px;
+      display: inline-block;
+      border-radius: 50%;
+      box-shadow: 0px 0px 1px 1px #0000001a;
+      margin-right: 10px;
   margin-left: 10px;
+    }
+    .pulse {
+  animation: pulse-animation 2s infinite;
 }
+
+@keyframes pulse-animation {
+  0% {
+    box-shadow: 0 0 0 0px rgb(185, 239, 119);
+  }
+  100% {
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+  }
+}
+
 /* Popup container - can be anything you want */
 .popup {
 height: 10px;
