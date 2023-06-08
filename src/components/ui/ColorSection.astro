@@ -91,6 +91,22 @@ const { extraInfo, link, text, size = "m-small-d-large" } = Astro.props;
     flex-wrap: nowrap;
   }
 
+  .animation {
+    animation: fadeInAnimation ease 1s;
+    animation-iteration-count: 1;
+  }
+
+  @keyframes fadeInAnimation {
+  	from {
+		opacity: 0.75;
+		transform: translate3d(0, 10%, 0);
+	}
+	to {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
+
 
 
 
