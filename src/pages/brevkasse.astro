@@ -33,7 +33,7 @@ const res = await fetch(supabaseUrl + "/rest/v1/brevkasse-girls", {
     </ColorSection>
     <UnderlinedHeader header="Læs andre pigers tanker" class="subheader" />
 
-    <div>
+    <div class="search-container">
       <p class="light-text searchcopy">Søg efter breve</p>
       <SearchBar />
     </div>
@@ -150,6 +150,10 @@ const res = await fetch(supabaseUrl + "/rest/v1/brevkasse-girls", {
 </script>
 
 <style>
+
+  .search-container {
+    height: 100px;
+  }
 .pr-10{
   padding-right:10px;
 }
