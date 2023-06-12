@@ -38,6 +38,9 @@ import Button from "../components/ui/Button.astro";
         <p slot="description">Har du nogle tanker, du har brug for at få ud af hovedet, så de fylder mindre?</p>
       </BoxColorButton>
     </div>
+    <div class="chatshortcut">
+    <a href="/chat.html">  <img src="/images/chatshortcut.png" alt="chatshortcut"></a>
+    </div>
   </div>
 </GirlsUniLayout>
 
@@ -128,6 +131,18 @@ import Button from "../components/ui/Button.astro";
   justify-content: center;
 }
 
+
+/*CHAT CONTAINER*/ 
+.chatshortcut img{
+  width: 100px;
+}
+
+.chatshortcut{
+  position: fixed;
+  top:80%;
+  right: 2%;
+}
+
   @media only screen and (min-width: 712px) {
     .medier-second-grid {
       display: grid;
@@ -139,6 +154,9 @@ padding: 40px;
  
   }
 
+  .chatshortcut{
+    display: none;
+  }
   
 
   }
