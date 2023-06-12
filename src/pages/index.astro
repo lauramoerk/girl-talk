@@ -15,16 +15,17 @@ import BoxColorButton from "../components/ui/BoxColorButton.astro";
       <img src="/images/heroimages/girls-on-stairs-1.webp" alt="Image with text." />
     </section>
     <div class="BoxColorButtonCenter">
-      <BoxColorButton size="m-extra-small-d-medium" title="Har du tanker, der fylder?" color="purple" text="Start anonym chat" link="/chat">
-        <h2 class="subheader" slot="title">Har du tanker, der fylder?</h2>
-        <p slot="description">Vi sidder klar til at hjælpe dig</p>
+      <BoxColorButton size="m-extra-small-d-medium" title="Har du tanker, der fylder?" color="pink" text="Gå til pigeunivers" link="/chat">
+        <h2 class="secondary-header" slot="title">GirlTalk's Pigeunivers</h2>
+        <p slot="description">Har du besøgt vores Pigeunivers? </p>
+        <p slot="description">Her finder du vores anonyme chat, brevkassen, informationer om vores pige-fællesskaber og en masse spændende viden om emner som sex, krop, venskaber og familie. </p>
       </BoxColorButton>
     </div>
     <div class="medier-second-section">
       <h2 class="sub-header-underlined">Tema: Venskaber og Familie</h2>
       <div class="medier-second-grid">
         <section class="mediumarticlecard">
-          <a href="#"><img src="/images/articleimages/bananaarticle.webp" alt="Artikel hvordan onanerer man?" /></a>
+          <a href="/specificarticlepage.html"><img src="/images/articleimages/bananaarticle.webp" alt="Artikel hvordan onanerer man?" /></a>
         </section>
         <section class="double-articlecard-second">
           <a href="/specificarticlepage.html"> <ArticleCard header="Kropsidealer - Hvordan påvirker de os?" category="Krop og sex" link="/images/articleimages/redbluegirlarticle.webp" alt="To piger med forskellige kropstyper" /></a>
@@ -32,7 +33,12 @@ import BoxColorButton from "../components/ui/BoxColorButton.astro";
         </section>
       </div>
     </div>
-
+    <div class="BoxColorButtonCenter">
+      <BoxColorButton size="m-extra-small-d-medium" title="Har du tanker, der fylder?" color="purple" text="Start anonym chat" link="/chat">
+        <h2 class="subheader" slot="title">Har du tanker, der fylder?</h2>
+        <p slot="description">Vi sidder klar til at hjælpe dig</p>
+      </BoxColorButton>
+    </div>
     <div class="index-bottom-section">
       <section class="first-bottom-section">
         <h2 class="subheader">Lær os bedre at kende</h2>
@@ -62,7 +68,7 @@ import BoxColorButton from "../components/ui/BoxColorButton.astro";
 
   /*HERO SECTION*/
   .indexherosection {
-    padding-bottom: 40px;
+    
     text-align: center;
     display: none;
   }

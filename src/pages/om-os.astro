@@ -127,9 +127,9 @@ import Button from "../components/ui/Button.astro";
     padding-top: 10px;
   }
   .section {
-    margin-top: var(--spacing-medium);
+    /* margin-top: var(--spacing-medium); */
    display: grid;
-   grid-template-rows: 1fr 1fr;
+   grid-template-rows: auto 1fr;
     gap: var(--spacing-small);
   }
 
@@ -138,13 +138,13 @@ import Button from "../components/ui/Button.astro";
   }
 
   .section-2 {
-    margin-top: var(--spacing-medium);
+    /* margin-top: var(--spacing-medium); */
     display: flex;
     gap: var(--spacing-small);
   }
 
   .section-3 {
-    margin-top: var(--spacing-small);
+    /* margin-top: var(--spacing-small); */
     display: flex;
     flex-direction: column;
   }
@@ -153,6 +153,10 @@ import Button from "../components/ui/Button.astro";
     display: flex;
     gap: var(--spacing-xs);
     flex-direction: column;
+  }
+
+  .text-section p {
+    margin: 0;
   }
 
   .text-section-3 {
@@ -187,12 +191,17 @@ import Button from "../components/ui/Button.astro";
   }
   @media only screen and (min-width: 900px){
     .layoutstyle{
-      gap: 80px;}
+      gap: 70px;
+    }
 
     .section-3{
       flex-direction: row;
       gap: 40px;
     }
+
+    .text-section-3 {
+    margin-top: 0;
+  }
     
   }
   @media only screen and (min-width: 1000px) {
@@ -211,6 +220,7 @@ import Button from "../components/ui/Button.astro";
       grid-template-rows: none;
       grid-template-columns: 1fr 1fr;
       gap: var(--spacing-large);
+      align-items: center;
     }
     .section img{
       width:100%

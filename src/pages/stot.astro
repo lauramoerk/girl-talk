@@ -63,14 +63,14 @@ import ButtonDonate from "../components/ui/ButtonDonate.astro";
 </BaseLayout>
 
 <script>
-  const filterButtons = document.querySelectorAll("a.donate");
+  const filterButtonsStot = document.querySelectorAll("a.donate");
 
-  const buttonsArray = [...filterButtons];
+  const buttonsArrayStot = [...filterButtonsStot];
 
-  buttonsArray.forEach((button) => {
+  buttonsArrayStot.forEach((button) => {
     button.addEventListener("click", () => {
-      if (buttonsArray.length) {
-        buttonsArray.forEach((button) => {
+      if (buttonsArrayStot.length) {
+        buttonsArrayStot.forEach((button) => {
           button.classList.remove("selected");
         });
       }

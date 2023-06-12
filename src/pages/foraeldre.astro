@@ -66,7 +66,7 @@ const res = await fetch(supabaseUrl + "/rest/v1/brevkasse-parents", {
         color="purple"
         text="book rådgivning"
         style="dark"
-        size="m-small-d-large"
+        size="m-small-d-medium"
         link="https://jpmpz0xim6i.typeform.com/to/x0qzx9Ej">
         <span class="width"></span>
       <h2 class="subheader" slot="title">Telefonrådgivning</h2>
@@ -93,7 +93,7 @@ const res = await fetch(supabaseUrl + "/rest/v1/brevkasse-parents", {
           <Button
             text="Skriv til brevkassen"
             style="dark"
-            size="m-small-d-large"
+            size="m-extra-small-d-medium"
             link="https://jpmpz0xim6i.typeform.com/to/JjBBzzKN"
           />
         </div>
@@ -111,7 +111,7 @@ const res = await fetch(supabaseUrl + "/rest/v1/brevkasse-parents", {
               </div>
               -->
         <div class="margintop button-container">
-          <Button text="Læs flere" />
+          <Button size="m-extra-small-d-medium" text="Læs flere" />
         </div>
       </div>
     </div>
@@ -143,7 +143,7 @@ const res = await fetch(supabaseUrl + "/rest/v1/brevkasse-parents", {
 
   .desktophero {
     display: none;
-    padding-bottom:40px;
+    /* padding-bottom:40px; */
   }
 
   .section-3-top {
@@ -183,6 +183,10 @@ const res = await fetch(supabaseUrl + "/rest/v1/brevkasse-parents", {
     max-width: 1150px;
   }
 
+  .section-2 {
+    width: auto;
+    display: flex;
+  }
   .margintop {
     margin-top: var(--spacing-small);
   }
@@ -236,6 +240,7 @@ const res = await fetch(supabaseUrl + "/rest/v1/brevkasse-parents", {
 
     .search-container {
       max-width: 30%;
+      height: 100px;
     }
 
     .button-container-end {
@@ -249,8 +254,8 @@ const res = await fetch(supabaseUrl + "/rest/v1/brevkasse-parents", {
 
   @media only screen and (min-width: 900px) {
    
-    .section-2{
+    /* .section-2{
       padding-bottom: 40px;
-    }
+    } */
   }
 </style>

@@ -48,9 +48,9 @@ const { extraInfo, link, text, size = "m-small-d-large" } = Astro.props;
     display: flex;
   }
 
-  .headline{
+  /* .headline{
    white-space: nowrap;
-  }
+  } */
   h2 {
     padding: 5px;
   }
@@ -91,14 +91,30 @@ const { extraInfo, link, text, size = "m-small-d-large" } = Astro.props;
     flex-wrap: nowrap;
   }
 
+  .animation {
+    animation: fadeInAnimation ease 1s;
+    animation-iteration-count: 1;
+  }
+
+  @keyframes fadeInAnimation {
+  	from {
+		opacity: 0.75;
+		transform: translate3d(0, 10%, 0);
+	}
+	to {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
+
 
 
 
 
   @media only screen and (min-width: 600px) {
-    .ColorSection {
-  margin-bottom: var(--spacing-2xl);
-}
+    /* .ColorSection {
+  margin-bottom: var(--spacing-xl);
+} */
     .flex-container {
     display: flex;
     max-width: 1000px;
@@ -113,7 +129,9 @@ const { extraInfo, link, text, size = "m-small-d-large" } = Astro.props;
     justify-content: flex-end;
   }
 
-
+  .headline{
+   white-space: nowrap;
+  } 
 
 
 }
