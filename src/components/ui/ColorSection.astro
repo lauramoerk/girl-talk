@@ -48,9 +48,9 @@ const { extraInfo, link, text, size = "m-small-d-large" } = Astro.props;
     display: flex;
   }
 
-  .headline{
+  /* .headline{
    white-space: nowrap;
-  }
+  } */
   h2 {
     padding: 5px;
   }
@@ -112,9 +112,9 @@ const { extraInfo, link, text, size = "m-small-d-large" } = Astro.props;
 
 
   @media only screen and (min-width: 600px) {
-    .ColorSection {
+    /* .ColorSection {
   margin-bottom: var(--spacing-xl);
-}
+} */
     .flex-container {
     display: flex;
     max-width: 1000px;
@@ -129,7 +129,9 @@ const { extraInfo, link, text, size = "m-small-d-large" } = Astro.props;
     justify-content: flex-end;
   }
 
-
+  .headline{
+   white-space: nowrap;
+  } 
 
 
 }
