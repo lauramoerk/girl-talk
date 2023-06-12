@@ -16,7 +16,7 @@ const navLinks = [{
     url: '/medier',
 },
 {
-    name: 'GirlTalk',
+    name: 'GirlTalk.dk',
     url: '/',
 }]
 ---
@@ -101,12 +101,7 @@ justify-content: center;
 }
 
 
-ul li:last-child {
-  font-weight: var(--font-weight-semibold);
-  background-color: var(--color-off-white);
-  padding: 10px 15px 10px 15px;
-  border-radius: 8px;
-}
+
 .nav-links-container{
         display: flex;
         flex-direction: row;
@@ -132,6 +127,7 @@ position: absolute;
 width: 200px;
 margin: auto;
 z-index: 0;
+padding-top: var(--spacing-2xs);
 }
 
 
@@ -330,6 +326,7 @@ width: 200px;
 .last-mobile-link{
     padding-top: 40px;
     font-weight: bolder;
+    
 }
 
 
@@ -370,7 +367,20 @@ FUNCTIONALITY. CONTROLLING STATE OF NAVIGATION
     @media only screen and (min-width: 600px){
     .NavPrimaryMobile{
         display: none;
+        
     }
+
+ul li:last-child {
+  font-weight: var(--font-weight-semibold);
+  background-color: var(--color-black-ish);
+  padding: 10px 15px 10px 15px;
+  border-radius: 8px;
+  border: 2px solid var(--color-black-ish);
+}
+
+ul li:last-child a {
+  color: var(--color-off-white);
+}
 
 
 
@@ -389,6 +399,8 @@ FUNCTIONALITY. CONTROLLING STATE OF NAVIGATION
     .NavPrimary{
         display: none;
     }
+
+    
     
 
 
