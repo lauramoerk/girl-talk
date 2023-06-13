@@ -19,16 +19,28 @@ const res = await fetch(supabaseUrl + "/rest/v1/brevkasse-girls", {
       });
     const data = await res.json();
     */
-
 ---
 
 <GirlsUniLayout title="Brevkasse">
   <div class="brevkasselayout">
-    <ColorSection color="pink" hex="#ffe4ee" title="GirlTalk's brevkasse" text="Skriv et brev" link="https://jpmpz0xim6i.typeform.com/to/pFHo1ZT6" size="m-extra-small-d-medium">
+    <ColorSection
+      color="pink"
+      hex="#ffe4ee"
+      title="GirlTalk's brevkasse"
+      text="Skriv et brev"
+      link="https://jpmpz0xim6i.typeform.com/to/pFHo1ZT6"
+      size="m-extra-small-d-medium"
+    >
       <h1 class="primary-header pr-10" slot="title">GirlTalk's brevkasse</h1>
       <div slot="description" class="text-in-component">
-        <p slot="description" class="themeheader">Har du nogle tanker, du har brug for at få ud af hovedet, så de fylder mindre?</p>
-        <p slot="description">Del dem med os her eller læs andre pigers spørgsmål, følelser og oplevelser.</p>
+        <p slot="description" class="themeheader">
+          Har du nogle tanker, du har brug for at få ud af hovedet, så de fylder
+          mindre?
+        </p>
+        <p slot="description">
+          Del dem med os her eller læs andre pigers spørgsmål, følelser og
+          oplevelser.
+        </p>
       </div>
     </ColorSection>
     <UnderlinedHeader header="Læs andre pigers tanker" class="subheader" />
@@ -47,13 +59,13 @@ const res = await fetch(supabaseUrl + "/rest/v1/brevkasse-girls", {
           <BrevkasseCard category={letter.category} filter={letter.category.toLowerCase().replace(/\s/g, "_")} header={letter.title} href="/specificletter" />)}
               </div>
               -->
-    <div class="margintop"><Button size="m-extra-small-d-medium" text="Læs flere"></Button></div>
+    <div class="margintop">
+      <Button size="m-extra-small-d-medium" text="Læs flere" />
+    </div>
   </div>
 </GirlsUniLayout>
 
 <script>
-  
-
   const filterButtonsBrevkasse = document.querySelectorAll("a.color");
   const cardsSection = document.querySelectorAll(".BrevkasseCard");
   const dropdownOptionsBrevkasse = document.querySelectorAll("select");
@@ -61,12 +73,6 @@ const res = await fetch(supabaseUrl + "/rest/v1/brevkasse-girls", {
   const buttonsArrayBrevkasse = [...filterButtonsBrevkasse];
   const filteredArrayBrevkasse = [...cardsSection];
   const optionsArrayBrevkasse = [...dropdownOptionsBrevkasse];
- 
-
-
-
-
- 
 
   optionsArrayBrevkasse.forEach((button) => {
     button.addEventListener("change", () => {
@@ -94,17 +100,7 @@ const res = await fetch(supabaseUrl + "/rest/v1/brevkasse-girls", {
     });
   });
 
-  
-
-
-
-
-
   buttonsArrayBrevkasse.forEach((button) => {
-
-
-
-
     button.addEventListener("click", () => {
       if (buttonsArrayBrevkasse.length) {
         buttonsArrayBrevkasse.forEach((button) => {
@@ -122,8 +118,6 @@ const res = await fetch(supabaseUrl + "/rest/v1/brevkasse-girls", {
 
       button.classList.toggle("selected");
 
-
-
       filteredArrayBrevkasse.forEach((filteredElement) => {
         if (button.textContent.toLowerCase() === "alle") {
           filteredArrayBrevkasse.forEach((filteredElement) => {
@@ -132,31 +126,26 @@ const res = await fetch(supabaseUrl + "/rest/v1/brevkasse-girls", {
             }
           });
         } else {
-          if (!filteredElement.classList.contains(button.textContent.toLowerCase().replace(/\s/g, "_"))) {
+          if (
+            !filteredElement.classList.contains(
+              button.textContent.toLowerCase().replace(/\s/g, "_")
+            )
+          ) {
             filteredElement.classList.add("none");
           }
         }
       });
     });
   });
-
-
-
-
-
-
-  
-
 </script>
 
 <style>
-
   .search-container {
     height: 100px;
   }
-.pr-10{
-  padding-right:10px;
-}
+  .pr-10 {
+    padding-right: 10px;
+  }
   .none {
     display: none;
   }
